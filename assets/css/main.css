@@ -1,0 +1,846 @@
+@font-face { font-family: 'Lato-Regular'; src: url("../fonts/Lato/Lato-Regular.eot"); src: url("../fonts/Lato/Lato-Regular.woff2") format("woff2"), url("../fonts/Lato/Lato-Regular.woff") format("woff"), url("../fonts/Lato/Lato-Regular.ttf") format("truetype"), url("../fonts/Lato/Lato-Regular.svg#Lato-Regular") format("svg"), url("../fonts/Lato/Lato-Regular.eot?#iefix") format("embedded-opentype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Light'; src: url("../fonts/Lato/Lato-Light.eot"); src: url("../fonts/Lato/Lato-Light.woff2") format("woff2"), url("../fonts/Lato/Lato-Light.woff") format("woff"), url("../fonts/Lato/Lato-Light.ttf") format("truetype"), url("../fonts/Lato/Lato-Light.svg#Lato-Light") format("svg"), url("../fonts/Lato/Lato-Light.eot?#iefix") format("embedded-opentype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Hairline'; src: url("../fonts/Lato/Lato-Hairline.eot"); src: url("../fonts/Lato/Lato-Hairline.woff2") format("woff2"), url("../fonts/Lato/Lato-Hairline.woff") format("woff"), url("../fonts/Lato/Lato-Hairline.ttf") format("truetype"), url("../fonts/Lato/Lato-Hairline.svg#Lato-Hairline") format("svg"), url("../fonts/Lato/Lato-Hairline.eot?#iefix") format("embedded-opentype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Bold'; src: url("../fonts/Lato/Lato-Bold.eot"); src: url("../fonts/Lato/Lato-Bold.woff2") format("woff2"), url("../fonts/Lato/Lato-Bold.woff") format("woff"), url("../fonts/Lato/Lato-Bold.ttf") format("truetype"), url("../fonts/Lato/Lato-Bold.svg#Lato-Bold") format("svg"), url("../fonts/Lato/Lato-Bold.eot?#iefix") format("embedded-opentype"); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'Lato-Black'; src: url("../fonts/Lato/Lato-Black.eot"); src: url("../fonts/Lato/Lato-Black.woff2") format("woff2"), url("../fonts/Lato/Lato-Black.woff") format("woff"), url("../fonts/Lato/Lato-Black.ttf") format("truetype"), url("../fonts/Lato/Lato-Black.svg#Lato-Black") format("svg"), url("../fonts/Lato/Lato-Black.eot?#iefix") format("embedded-opentype"); font-weight: normal; font-style: normal; }
+
+#contenedorInterior3TMP{ border: 0px! important}
+
+.clearfix::before, .clearfix::after{
+	display: table;
+	content: " ";
+}
+
+.clearfix::after{
+	clear:both;
+}
+
+.img-responsive{
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+.desktop{
+	display: block;
+}
+
+.mobile{
+	display: none;
+}
+
+#ocr-content{
+	width: 958px;
+	margin: 0 auto;
+}
+
+#ocr-content .ocr-head{
+	position: relative;
+}
+
+/* OCR - Head */
+#ocr-content .ocr-head h1{
+	padding: 20px 12px 0 23px;
+	float: left;
+}
+
+#ocr-content .ocr-head-text{
+	float: left;
+	width: 277px;
+	line-height: 26px;
+	text-align: justify;
+	position: absolute;
+	top: 74px;
+	right: 62px;
+}
+
+#ocr-content .ocr-head h2{
+	font-size: 22px;
+	color: #333333;
+	font-family: 'Lato-Regular';
+	text-transform: uppercase;
+}
+
+#ocr-content .ocr-head h2 strong{
+	font-family: 'Lato-Bold';
+}
+
+#ocr-content .ocr-head a{
+	font-size: 14px;
+	color: #333333;
+	font-family: 'Lato-Regular';
+	border-bottom: 1px solid #AEAEAE;
+	padding: 0 0 1px 0;
+}
+
+/* OCR - Contador */
+#ocr-content .ocr-contador{
+	position: absolute;
+	width: 330px;
+	height: 150px;
+}
+
+#ocr-content .ocr-contador h3{
+	color: #333333;
+	font-size: 19px;
+	text-transform: uppercase;
+	font-family: 'Lato-Hairline';
+	padding: 41px 0 0 40px;
+	float: left;
+}
+
+#ocr-content .ocr-contador h3 strong{
+	font-family: 'Lato-Bold';
+}
+
+#ocr-content .ocr-contador .ocr-reloj{
+	margin: 0;
+	font-family: 'Lato-Regular';
+	font-size: 35px;
+	color: red;
+	background-repeat: no-repeat;
+	width: 190px;
+	height: 35px;
+	position: absolute;
+	top: 95px;
+	left: 40px;
+}
+#ocr-content .ocr-contador .ocr-reloj .hasCountdown div{
+	float: left;
+	width: 55px;
+	margin: 0px 0 0 5px;
+	text-align: center;
+	letter-spacing: 2px;
+}
+#ocr-content .ocr-contador .ocr-reloj .hasCountdown div:first-child{
+	margin-left: 0;
+}
+#ocr-content .ocr-contador .ocr-reloj .reloj-hora, #ocr-content .ocr-contador .ocr-reloj .reloj-minutos, #ocr-content .ocr-contador .ocr-reloj .reloj-segundos{
+	position: relative;
+}
+#ocr-content .ocr-contador .ocr-reloj .reloj-hora::before, #ocr-content .ocr-contador .ocr-reloj .reloj-minutos::before, #ocr-content .ocr-contador .ocr-reloj .reloj-segundos::before{
+	content: 'HORAS';
+	color: red;
+	font-family: 'Lato-Regular', sans-serif;
+	font-size: 8px;
+	text-transform: uppercase;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	bottom: -15px;
+	letter-spacing: 0.1;
+}
+
+#ocr-content .ocr-contador .ocr-reloj .reloj-minutos::before{
+	content: 'MINUTOS';
+}
+
+#ocr-content .ocr-contador .ocr-reloj .reloj-segundos::before{
+	content: 'SEGUNDOS';
+}
+
+#ocr_cont_1, #ocr_cont_2, #ocr_cont_3, #ocr_cont_4, #ocr_cont_5, #ocr_cont_6, #ocr_cont_7, #ocr_cont_8, #ocr_cont_9, #ocr_cont_10, #ocr_cont_11, #ocr_cont_12{display:none}
+
+
+#ocr-content .ocr-ofertas{
+	padding: 4px 0 0 0px;
+}
+
+.contenedorDescripcion{
+	position: relative;
+	height: 295px
+}
+
+#ocr-content .ocr-dobleLargo .contenedorDescripcion{
+	height: 612px;
+}
+
+#ocr-content .ocr-prodEvento{
+	width: 309px;
+	height: 295px;
+	float: left;
+	margin: 6px;
+	border: 1px solid #d2d2d2;
+	position: relative;
+}
+
+#ocr-content .ocr-prodEvento.ocr-dobleAncho{
+	width: 633px;
+}
+
+#ocr-content .ocr-prodEvento.ocr-dobleAncho .precioProd{
+	top: 60px;
+	width: 180px;
+	left: unset;
+	right: 20px;
+}
+
+#ocr-content .ocr-prodEvento.ocr-dobleLargo{
+	height: auto;
+	display: inline-block;
+}
+
+#ocr-content .ocr-prodEvento.ocr-dobleLargo .precioProd{
+	top: 200px;
+}
+
+#ocr-content .ocr-cont-dobleydos{
+	width: 640px;
+	float: left;
+}
+
+.ocr-precioCont{
+	z-index: 10;
+	position: absolute;
+	bottom: 23px;
+	right: 0;
+	width: 138px;
+}
+
+#ocr-content .ocr-prodEvento .descripcionPrincipal{
+	font-family: 'Lato-Bold';
+	font-size: 15px;
+	color: #363636;
+}
+
+#ocr-content .ocr-prodEvento .descripcionSecundaria{
+	font-family: 'Lato-Regular';
+	font-size: 13px;
+	color: #666666;
+}
+
+#ocr-content .ocr-prodEvento .simboloPesos{
+	color: #ae0000;
+	font-size: 17px;
+	font-family: 'Lato-Bold';
+	float: left;
+	margin: 3px 2px 0 0;	
+}
+
+#ocr-content .ocr-prodEvento .contenedorIconoOu{
+	background-image: url('http://www.falabella.com/static/site/content/eventos/ocr/img/ou.png');
+	width: 41px;
+	height: 60px;
+	float: left;
+	margin: -17px 0 0 -56px;
+	display: none;
+}
+
+#ocr-content .ocr-prodEvento .precioPrincipal{
+	color: #c00;
+	font-size: 31px;
+	font-family: 'Lato-Bold';
+	float: left;
+}
+
+#ocr-content .ocr-prodEvento .precioNormal{
+	color: #666666;
+	font-size: 11px;
+	font-family: 'Lato-Regular';
+	padding: 0 0 9px 0;
+	width: 123px
+}
+
+#ocr-content .ocr-prodEvento .porcentajeDescuento{
+	background-image: url('http://www.falabella.com/static/site/content/eventos/ocr/img/porcentaje.png');
+	background-repeat: no-repeat;
+	width: 158px;
+	height: 104px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	padding: 3px 0 0 7px;
+}
+
+#ocr-content .ocr-prodEvento .porcentajeDescuento span{
+	color: #ffffff;
+	font-size: 51px;
+	font-family: 'Lato-Bold';
+	float: left;
+	padding: 0 1px 0 0;
+}
+
+#ocr-content .ocr-prodEvento .porcentajeDescuento div{
+	font-family: 'Lato-Regular';
+	font-size: 26px;
+	color: #ffffff;
+	padding: 6px 0 0 0;
+}
+
+#ocr-content .ocr-prodEvento .porcentajeDescuento div div{
+	font-size: 10px;
+	padding: 0;
+	margin: -3px 0 0 0;
+}
+
+#ocr-content .ocr-prodEvento .precioAhorro{
+	width: 150px;
+	height: 14px;
+	background-color: #000000;
+	color: #ffffff;
+	font-family: 'Lato-Regular';
+	text-align: center;
+	font-size: 13px;
+	padding: 3px 0 0 0;
+	margin: 0 0 0 -31px;
+	text-transform: uppercase;
+	width: 173px;
+	letter-spacing: 1px;
+}
+
+#ocr-content .ocr-prodEvento .prod-imagen{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+}
+
+#ocr-content .ocr-prodEvento .stock-prod{
+	font-size: 11px;
+	font-family: 'Lato-Regular';
+	color: #363636;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	z-index: 3;
+}
+
+#ocr-content .ocr-prodEvento .cont-agotado{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('http://www.falabella.com/static/site/content/eventos/ocr/img/fondoagotado.png');
+	background-repeat: repeat;
+	z-index: 12;
+	display: block;
+}
+
+#ocr-content .ocr-prodEvento .cont-agotado div{
+	width: 100%;
+	color: #ff0000;
+	font-size: 20px;
+	font-family: 'Lato-Regular';
+	text-align: center;
+	margin: 117px 0 0 0;
+	text-transform: uppercase;
+	line-height: 20px;
+	background-color: #ffffff;
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+#ocr-content .ocr-prodEvento .cont-hover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image: url('http://www.falabella.com/static/site/content/eventos/ocr/img/fondo-hover.png');
+	background-repeat: repeat;
+	z-index: 11;
+	display: none;
+	cursor: pointer;
+}
+
+#ocr-content .ocr-prodEvento:hover .cont-hover{
+	display: block;
+}
+
+#ocr-content .ocr-prodEvento .hover-comprar{
+	text-align: center;
+	padding: 80px 0 0 0;
+}
+
+#ocr-content .ocr-dobleLargo .hover-comprar{
+	padding: 240px 0 0 0;
+}
+
+#ocr-content .ocr-prodEvento .ocr-boton-comprar{
+	color: #ffffff;
+	background-image: url('http://www.falabella.com/static/site/content/eventos/ocr/img/boton-comprar.png');
+	background-repeat: no-repeat;
+	background-position: center top;
+	width: 120px;
+	height: 39px;
+	overflow: hidden;
+	position: relative;
+	margin: 11px auto 0 auto;
+	text-indent: -99999px;
+}
+
+#ocr-popuplegal{
+	background-image: url('http://www.falabella.com/static/site/content/eventos/ocr/img/fondo-legal.jpg');
+	background-repeat: no-repeat;
+	width: 723px;
+	height: 323px;
+	z-index: 100;
+	position: relative;
+}
+
+#ocr-popuplegal .ocr-popuplegal-head{
+	text-align: center;
+	padding: 10px 0 0 0;
+}
+
+#ocr-popuplegal p{
+	text-align: center;
+	color: #363636;
+	font-size: 16px;
+	font-family: 'Lato-Regular';
+	width: 635px;
+	margin: 0 auto;
+	text-align: justify;
+	padding: 40px 0 0 0;	
+}
+
+#cboxOverlay {
+	opacity: 0.7 !important;
+	background-color: #000;
+	filter: alpha(opacity=70) !important;
+}
+
+#cboxClose {
+	z-index: 101;
+}
+
+.ocr-legal{
+	padding: 167px 0px 0 38px;
+	color: #8a8a8a;
+	font-size: 11px;
+}
+
+.hoverProd{
+	height:100%; 
+	width:100%; 
+	position:absolute; 
+	background: linear-gradient(to bottom, #aad500 0%, #8fca00 50%, #74b700 100%); 
+	cursor:pointer; 
+	z-index:10; 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+	filter: alpha(opacity=0); 
+	-moz-opacity:0; 
+	-khtml-opacity:0; 
+	opacity:0; 
+	webkit-transition: all 0.2s ease-in-out; 
+	transition: all 0.2s ease-in-out;
+}
+
+.hoverProd span{
+	height:100%; 
+	width:100%; 
+	position:relative; 
+	float:left; 
+	margin-top:-40px;
+}
+
+.hoverProd div{
+	width:140px; 
+	height:40px; 
+	position:absolute; 
+	left:50%; 
+	top:39%; 
+	margin:17px -70px; 
+	font-family:"Lato-Bold"; 
+	font-size:18px; 
+	line-height:40px; 
+	color:#fff; 
+	text-align:center; 
+	border:2px solid #fff;
+}
+
+.ocr-prodEvento a{
+	display: block;
+	position: relative;
+	-webkit-transition: all 0.3s ease-in-out; 
+	-moz-transition: all 0.3s ease-in-out; 
+	-o-transition: all 0.3s ease-in-out; 
+	-ms-transition: all 0.3s ease-in-out; 
+	transition: all 0.3s ease-in-out;
+}
+
+.ocr-prodEvento a .legal{
+	position: absolute;
+	right: 2px;
+	bottom: 2px;
+	font-size: 10px;
+	color: #666;
+	text-decoration: none;
+	padding: 2px;
+	font-family: "Lato-Regular", sans-serif;
+	z-index: 10;
+}
+
+.ocr-prodEvento a .mask{
+	height:100%; 
+	width:100%; 
+	position:absolute;
+	left: 0;
+	top: 0; 
+	background: linear-gradient(to bottom, #aad500 0%, #8fca00 50%, #74b700 100%); 
+	z-index:10; 
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; 
+	filter: alpha(opacity=0); 
+	-moz-opacity:0; 
+	-khtml-opacity:0; 
+	opacity:0; 
+	-webkit-transition: all 0.3s ease-in-out; 
+	-moz-transition: all 0.3s ease-in-out; 
+	-o-transition: all 0.3s ease-in-out; 
+	-ms-transition: all 0.3s ease-in-out; 
+	transition: all 0.3s ease-in-out;
+}
+
+.ocr-prodEvento a .action{
+	position: absolute;
+	padding: 15px;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	top: 45%;
+	width: 180px;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 700;
+	letter-spacing: 0.9px;
+	color: #333;
+	text-align: center;
+	font-family: "Lato-Regular";
+	opacity: 0;
+	z-index: 50;
+	opacity: 0;
+	-webkit-transition: all 0.4s ease-in-out; 
+	-moz-transition: all 0.4s ease-in-out; 
+	-o-transition: all 0.4s ease-in-out; 
+	-ms-transition: all 0.4s ease-in-out; 
+	transition: all 0.4s ease-in-out;
+}
+
+.ocr-prodEvento a .action::before{
+	content: '';
+	background-color: #fff;
+	opacity: 0.85;
+	width: 0;
+	height: 100%;
+	top: 0;
+	left: 106px;
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.2s ease-out; 
+	-moz-transition: all 0.2s ease-out; 
+	-o-transition: all 0.2s ease-out; 
+	-ms-transition: all 0.2s ease-out; 
+	transition: all 0.2s ease-out;
+}
+
+.ocr-prodEvento a .action::after{
+	content: '';
+	background-color: #fff;
+	opacity: 0.85;
+	width: 0;
+	height: 100%;
+	top: 0;
+	right: 106px;
+	position: absolute;
+	z-index: -1;
+	-webkit-transition: all 0.2s ease-out; 
+	-moz-transition: all 0.2s ease-out; 
+	-o-transition: all 0.2s ease-out; 
+	-ms-transition: all 0.2s ease-out; 
+	transition: all 0.2s ease-out;
+}
+
+.ocr-prodEvento a:hover .mask{
+	opacity: 0.85;
+}
+
+.ocr-prodEvento a:hover .action{
+	opacity: 1;
+}
+
+.ocr-prodEvento a:hover .action::before{
+	left: 0;
+	width: 50%;
+}
+
+.ocr-prodEvento a:hover .action::after{
+	right: 0;
+	width: 50%;
+}
+
+
+.ocr-prodEvento{
+	position:relative; 
+	float:left; 
+	margin:12px;
+}
+
+.ocr-prodEvento img{
+	position:relative; 
+	float:left; 
+	z-index:2;
+}
+
+.ocr-prodEvento a:hover .hoverProd{
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)"; 
+	filter: alpha(opacity=80); 
+	-moz-opacity:0.80; 
+	-khtml-opacity:0.80; 
+	opacity:0.80;
+}
+
+.precioProd{
+	position: absolute;
+	text-align: left;
+	z-index: 9;
+	top: 60px;
+	width: 150px;
+	left: unset;
+	right: 10px;
+}
+
+.no-CMR{
+	right: 0px;
+	width: 130px;
+}
+
+.with-CMR{
+	width: 170px;
+}
+
+.discount{
+	width:118px; 
+	height:43px; 
+	padding:5px; 
+	position:absolute; 
+	top:5px; 
+	left:-11px; 
+	background:url('../recursos/flag.svg') 0 0 no-repeat; 
+	z-index:100;
+}
+
+.discount span{
+	color:#fff; 
+	float:left; 
+	font-family: "Lato-Bold"; 
+	font-size:33px; 
+	padding:0 2px 0 0; 
+	line-height: 1.1;
+}
+
+.discount div{
+	color:#fff; 
+	font-family: "Lato-Regular"; 
+	font-size:22px; 
+	padding:1px 0 0;
+}	
+
+.discount div div{
+	font-size:10px; 
+	margin:-2px 0 0; 
+	padding:0;
+}
+
+.stockInic{
+	color: #666;
+	position: absolute;
+	bottom: 8px;
+	right: 16px;
+	z-index: 2;
+}
+
+.dynprice-marca{
+	color:#666;
+	font-family:"Lato-Bold";
+	font-size:18px; 
+	font-weight:normal;
+	text-transform: uppercase;
+	margin: 18px 0 5px;
+}
+
+.dynprice-descripcion{
+	color:#666; 
+	font-family:"Lato-Regular"; 
+	font-size:13px; 
+	max-width:160px;
+	margin: 5px 0 13px;
+	min-height: 32px;
+}
+.dynprice-price{
+	color: #666 !important;
+	font-family: "Lato-Regular", sans-serif;
+	font-size: 12px;
+	display: block;
+}
+
+.precio-normal, .precio-internet{
+	position: relative;
+	padding-left: 50px;
+}
+
+.precio-normal .dynprice-currency, .precio-internet .dynprice-currency{
+	font-size: 12px;
+}
+
+.precio-normal::before{
+	content: "Normal: ";
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.precio-internet::before{
+	content: "Internet: ";
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.dynprice-main-price::before {
+	content: "" !important;
+}
+
+.dynprice-main-price{
+	color:#ff0000 !important; 
+	font-family:"Lato-Bold"; 
+	font-size:24px; 
+	display: inline-block;
+	line-height: 0.9;
+	padding: 0;
+}
+
+.dynprice-main-price span{
+	font-size: 24px;
+}
+.CMR{
+	position: relative;
+}
+
+.CMR::after{
+	background: url(http://www.falabella.com.co/static/minisitios/blackfriday/assets/images/cmr.png);
+	content: '';
+	width: 54px;
+	height: 25px;
+	background-repeat: no-repeat;
+	position: absolute;
+	right: -55px;
+	top: -5px;
+}
+.precioAnt{
+	display:inline; 
+	font-size:13px; 
+	color:#333;
+}
+
+.precioAnt p {
+	text-decoration:line-through; 
+	color:#cc0000; 
+	font-size:14px; 
+	display:inline;
+}
+
+.precioAnt p span{
+	color:#333;
+}
+
+.cuadroIzq {
+	margin-left: 0px!important
+}
+.cuadroDer {
+	margin-right: 0px!important;
+}
+.CR_logo{ 
+	width: 212px;
+	height: 181px;
+	background: url('http://www.falabella.com/static/site/content/eventos/ocr/0916/img/CR_logo.png') no-repeat 0 0;
+	position: absolute;
+	top: 191px;
+	left: 775px;
+	z-index: 1;
+}
+.ocr-head-text span{ 
+	font-size: 33px;
+	line-height: 36px;
+	font-weight: 600;
+	font-style: italic;
+}
+.ocr-contador strong{
+	font-size: 25px;
+}
+
+#ocr-content .texto-legal{
+	font-size: 11px;
+	color: #666;
+	font-family: "Lato-Regular", sans-serif;
+	padding: 15px 10px;
+}
+
+/* Mobile Optimization */
+@media only screen and (max-width: 640px){
+
+	body{
+		overflow-x: hidden !important;
+	}
+	#ocr-content .ocr-head{
+		padding-bottom: 10px !important;
+	}
+
+	#ocr-content .ocr-ofertas{
+		padding: 5px 15px !important;
+	}
+
+	.desktop{
+		display: none !important;
+	}
+
+	.mobile{
+		display: block !important;
+	}
+	
+	#ocr-content .ocr-prodEvento.ocr-dobleAncho .precioProd{
+		right: 0 !important;
+	}
+
+	#ocr-content, #ocr-content .ocr-prodEvento.ocr-dobleAncho, #ocr-content .ocr-prodEvento, .ocr-cont-dobleydos, #ocr-content .ocr-prodEvento.ocr-dobleLargo, #ocr-content .ocr-cont-dobleydos{
+		height: auto !important;
+		width: 100% !important;
+		max-width: 100% !important;
+		float: unset !important;
+		margin: 0px 0px 10px !important;
+	}
+	
+	.discount{
+		padding-top: 5px !important;
+	}
+
+	.discount span{
+		font-size: 29px !important;
+		line-height: 0.9 !important;
+	}
+
+	.discount div{
+		font-size: 18px !important;
+		line-height: 1 !important;
+	}
+
+	.discount div div{
+		font-size: 7px !important;
+		margin: -1px 0 0 !important;
+	}
+
+	.precioProd, #ocr-content .ocr-prodEvento.ocr-dobleLargo .precioProd{
+		top: 22.5% !important;
+	}
+	
+	.precio-normal, .precio-internet{
+		line-height: 1.3 !important;
+	}
+
+	#ocr-content .texto-legal p{
+		font-size: 12px !important;
+    	line-height: 1.3 !important;
+    }
+}
